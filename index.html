@@ -10,7 +10,8 @@
 <body>
     <button type="button" id="gonderbtn">Tıkla</button>
     <input type="text" id="value">
-    <button type="button" name="button">YENİ PENCEREEEE</button>
+    <input type="password" id="txtsifre">
+    <button type="button" name="button" id="newpencere">YENİ PENCEREEEE</button>
     <script>
         const electron = require('electron');
         const {
@@ -18,12 +19,16 @@
         } = electron;
 
 
-
+        let newP = document.querySelector('#newpencere');
         let btn = document.getElementById("gonderbtn");
         let inputvalue = document.getElementById('value');
+        let txtsifre = document.querySelector('#txtsifre');
+        newP.addEventListener("click", () => {
+            ipcRenderer.send("key3");
+        });
         btn.addEventListener("click", () => {
             ipcRenderer.send('key', 'merhabaaaaa');
-            ipcRenderer.send('key2', inputvalue.value);
+            ipcRenderer.send('key2', inputvalue.value + '*' + txtsifre.value);
         });
     </script>
 </body>
