@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(100,200,245);
+    color: white;
+    font-size: 200;
+    text-align: center;
+}
+p{
+    font-family: sans-serif;
+    font-style: oblique;
+    font-size: 32px;
+}
+h1{
+    font-family: monospace;
+    font-style: italic;
+}
